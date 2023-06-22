@@ -64,7 +64,8 @@ function SignIn() {
 
   const submitFormData = (e) => {
     e.preventDefault();
-    AuthApi.Login(formData)
+    return navigate("/dashboard");
+    /*AuthApi.Login(formData)
       .then((response) => {
         if (response.data.success) {
           return setProfile(response);
@@ -77,7 +78,7 @@ function SignIn() {
           return setError(error.response.data.msg);
         }
         return setError("There has been an error.");
-      });
+      });*/
   };
 
   const handleRedirect = () => {

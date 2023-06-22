@@ -7,7 +7,7 @@ export const ProtectedRoute = () => {
   const navigate = useNavigate();
   let { user } = useAuth();
     return (<>
-      {(!user || !user.token || user.token === "") ? (
+      {/*{(!user || !user.token || user.token === "") ? (
         <SweetAlert
           title="You must be signed in!"
           onCancel={() => navigate("/authentication/sign-in")}
@@ -16,6 +16,7 @@ export const ProtectedRoute = () => {
         />
       ) : (
         <Outlet />
-      )}
+      )}*/}
+      <Outlet />
   </>);
 };
